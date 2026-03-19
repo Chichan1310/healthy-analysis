@@ -8,8 +8,6 @@ os.makedirs("output", exist_ok=True)
 
 # Load dataset
 df = pd.read_csv("healthy_eating_dataset.csv")
-print(df.head())
-print("\nColumns in dataset:", df.columns)
 
 # 1️⃣ Top 10 Meals by Calories
 plt.figure(figsize=(12,6))
@@ -41,7 +39,5 @@ if 'meal_type' in df.columns:
     plt.tight_layout()
     plt.savefig("output/meal_type_distribution.png")
     plt.close()
-else:
-    print("Column 'meal_type' not found. Skipping graph.")
 
 print("Graphs generated in output/ folder!")
